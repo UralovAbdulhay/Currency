@@ -16,19 +16,9 @@ import java.time.format.DateTimeFormatter;
 @RequiredArgsConstructor
 public class CurrencyApplication {
 
-    private final CurrencyService currencyService;
 
     public static void main(String[] args) {
         SpringApplication.run(CurrencyApplication.class, args);
-    }
-
-
-    @Scheduled(cron = "0 */1 * * * *")
-    public void synchronizeData() {
-        System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
-        currencyService.synchronizeData();
-        System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
-
     }
 
 
