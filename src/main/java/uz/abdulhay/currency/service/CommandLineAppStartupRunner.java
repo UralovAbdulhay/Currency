@@ -24,9 +24,9 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
     @Scheduled(cron = "0 1 * * * *")
     public void synchronizeData() {
 
-         System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
+//          System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
         currencyService.synchronizeData();
-         System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
+//          System.out.println(DateTimeFormatter.ofPattern("HH:mm:ss SSS").format(LocalTime.now()));
     }
 
 
